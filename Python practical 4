@@ -1,0 +1,71 @@
+# Creating a dictionary
+student = {
+    "name": "John Doe",
+    "age": 20,
+    "grade": "A",
+    "subjects": ["Math", "Science", "English"]
+}
+print("Student Dictionary:", student)
+# Accessing values
+print("Name:", student["name"])
+print("Grade:", student.get("grade"))
+# Handling missing keys
+print("Hobby:", student.get("hobby", "Not specified"))
+# Adding a new key-value pair
+student["hobby"] = "Reading"
+print("Updated Dictionary:", student)
+# Updating an existing value
+student["grade"] = "A+"
+print("Updated Grade:", student)
+# Using del
+del student["hobby"]
+print("After Deletion (del):", student)
+# Using pop
+age = student.pop("age")
+print("Popped Age:", age)
+print("After Deletion (pop):", student)
+# Looping through keys
+print("Keys:")
+for key in student.keys():
+
+print(key)
+# Looping through values
+print("\nValues:")
+for value in student.values():
+    print(value)
+# Looping through key-value pairs
+print("\nKey-Value Pairs:")
+for key, value in student.items():
+    print(f"{key}: {value}")
+
+# Write a program to add a new key-value pair to a dictionary.
+thisdict =	{
+"brand": "Ford",
+"model": "Mustang",
+"year": 1964
+}
+print(thisdict)
+new_key=input("Enter new key: ")
+new_value=input("Enter new value: ")
+thisdict[new_key]=new_value
+print(thisdict)
+
+# Write a program to remove a key-value pair from a dictionary.
+thisdict =	{
+"brand": "Ford",
+"model": "Mustang",
+"year": 1964
+}
+print(thisdict)
+a=input("Enter key to remove : ")
+thisdict.pop(a)
+print(thisdict)
+
+# # Create a dictionary that stores the population of three cities. Print the dictionary.
+thisdict={}
+print("City population",thisdict)
+for i in range(0,3):
+    new_key=input("Enter the key:")
+    new_value=input("Enter the value:")
+    thisdict[new_key]=new_value
+print("City Population :",thisdict)
