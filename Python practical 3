@@ -1,0 +1,106 @@
+Sum of Natural numbers
+# n=int(input("Enter the number:"))
+# i=1 
+# product=1 
+# while i<=n:
+#     product+=i 
+#     i+=1 
+# print("sum of Natural ",n,"is",product)
+
+Print series of natural nos with user input initial and final range
+# i=int(input("Enter initial number:")) 
+# num=int(input("Enter final number:"))
+# while i<=num:
+#     print(i)
+#     i+=1
+# print("Exit")
+
+Print fibonacci seq upto 10th term
+i=0
+a,b=0,1
+num=10
+print("fibonacci series:")
+while i<num:
+    print(a,end=" ")
+    c=a+b
+    a=b
+    b=c
+    i+=1
+Math module
+import math
+# Find the square root of a number
+num = 16
+print(f"Square root of {num} is {math.sqrt(num)}")
+# Calculate the sine of 90 degrees (convert to radians first)
+angle = 90
+print(f"Sine of {angle} degrees is {math.sin(math.radians(angle))}")
+# Calculate factorial of a number
+number = 5
+print(f"Factorial of {number} is {math.factorial(number)}")
+
+Random Module
+import random
+# Generate a random integer between 1 and 10
+print("Random integer between 1 and 10:", random.randint(1, 10))
+# Generate a random float between 0 and 1
+print("Random float between 0 and 1:", random.random())
+# Choose a random element from a list
+colors = ["red", "blue", "green", "yellow"]
+print("Randomly chosen color:", random.choice(colors))
+# Shuffle a list
+numbers = [1, 2, 3, 4, 5]
+random.shuffle(numbers)
+print("Shuffled list:", numbers)
+
+Time Module
+import time
+# Start the timer
+start_time = time.time()
+# Perform a task (example: calculate sum of numbers from 1 to 1,000,000)
+total = sum(range(1, 10000000001))
+# End the timer
+end_time = time.time()
+print(f"Total: {total}")
+print(f"Time taken: {end_time - start_time:.2f} seconds")
+
+Using Break
+Q.Exit the loop once "banana" is found
+fruits = ["apple", "orange", "banana", "cherry", "mango"]
+for fruit in fruits:
+    if fruit == "banana":
+        print(f"Found {fruit}! Breaking the loop.")
+        break
+    print(f"Checked: {fruit}")
+Q. Break the outer loop when a specific combination is found
+for x in range(1, 4):
+    for y in range(1, 4):
+        if x == 2 and y == 2:
+            print(f"Breaking at x={x}, y={y}")
+            break
+        print(f"x={x}, y={y}")
+    if x == 2 and y == 2:
+        break
+
+Using Continue
+Q. Skip vowels in a string
+text = "Python Programming"
+for char in text:
+    if char.lower() in "aeiou":
+        continue
+    print(char, end="")
+Q. Skip pairs where x equals y
+for x in range(1, 4):
+    for y in range(1, 4):
+        if x == y:
+            continue
+        print(f"x={x}, y={y}")
+    Q. Using both Break & Continue create a number guessing game
+while True:
+    guess = int(input("Guess the number (between 1 and 10): "))
+    if guess < 1 or guess > 10:
+        print("Out of range. Try again.")
+        continue
+    if guess == 7:
+        print("Congratulations! You guessed it.")
+        break
+    print("Wrong guess. Try again.")
