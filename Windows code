@@ -1,0 +1,31 @@
+[1/27, 12:23 PM] +91 77383 97373: REM Disk operations
+diskcomp A: B:
+diskcopy A: B:
+
+REM File operations
+echo "Hello World" > file1.txt
+fc file1.txt file2.txt
+find "pattern" file1.txt
+rename file1.txt new_name.txt
+type new_name.txt
+
+REM System management
+set
+ver
+[1/27, 12:23 PM] +91 77383 97373: REM Directory operations
+md new_folder
+cd new_folder
+echo Hello > file1.txt
+xcopy file1.txt ../backup /E /I
+move file1.txt ../backup
+cd ..
+rd new_folder
+
+REM System information and management
+date
+time
+path
+chkdsk C:
+cls
+defrag C:
+del backup\file1.txt
