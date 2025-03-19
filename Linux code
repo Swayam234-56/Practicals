@@ -1,0 +1,31 @@
+[2/3, 12:32 PM] +91 98924 54028: # Navigate and manage directories
+pwd
+cd /home/user
+ls -l
+mkdir new_folder
+cd new_folder
+touch file1.txt
+echo "Hello World" > file1.txt
+head file1.txt
+chmod 755 file1.txt
+rm file1.txt
+cd ..
+rmdir new_folder
+
+
+[2/3, 12:32 PM] +91 98924 54028: # File operations and system information
+ps
+top
+grep "pattern" file.txt
+find /home/user -name "file.txt"
+locate file.txt
+date
+cal
+uptime
+whoami
+uname -a
+df -h
+du -sh /home/user
+free -m
+whereis ls
+which python
